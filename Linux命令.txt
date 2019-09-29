@@ -1,0 +1,14 @@
+ ps -ef | grep java    查找服务进程【java是进程名】编号；
+kill -9 21954    结束进程【21954进程编号】
+
+cd /usr/local/bph_server/    进入jar包路径
+nohup java -jar ksj_base.jar &   后台启动服务
+
+ sh startup.sh|tail -f ../logs/catalina.out  启动tomcat程序并且看启动的结果
+其中sh startup.sh       是运行tomcat命令。
+tail               显示文件的最后一部分
+-f                如果文件的大小在增长的话，tail将跟随文件的增长而显示
+../               上一级目录
+logs/catalina.out    logs文件夹里面的catalina.out文件。
+
+tar -xzvf file.tar.gz 解压
